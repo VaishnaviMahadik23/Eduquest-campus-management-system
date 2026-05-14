@@ -8,7 +8,7 @@ function refreshPage() {
 // Logout
 function logout() {
     localStorage.clear();
-    window.location.href = "landing-page.html";
+    window.location.href = "index.html";
 }
 
 function openPage(url) {
