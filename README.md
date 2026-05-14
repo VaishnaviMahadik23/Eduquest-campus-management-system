@@ -291,6 +291,6 @@ This repository is created for educational, learning, and portfolio purposes.
 
 ## 🌐 Live Demo
 
-Frontend: https://your-vercel-url.vercel.app
+Frontend: https://eduquest-campus-management-system.vercel.app/
 
 Backend API: https://eduquest-campus-management-system.onrender.com
