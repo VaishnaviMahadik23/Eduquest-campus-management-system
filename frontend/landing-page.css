@@ -1,0 +1,313 @@
+/* Fix sizing issue */
+* {
+    box-sizing: border-box;
+}
+/* ================= GLOBAL ================= */
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    height: 100vh;
+    background: url('images/Login_BG_Image.png')
+        no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Overlay */
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+}
+
+/* Container */
+.auth-container {
+    width: 1050px;
+    height: auto;
+    position: relative;
+    z-index: 2;
+}
+
+/* Hide all pages */
+.page {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+/* Active page */
+.page.active {
+    display: flex;
+}
+
+/* ================= LOGIN LAYOUT ================= */
+
+#loginPage {
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    backdrop-filter: blur(8px);
+    color: white;
+}
+
+/* Left Panel */
+.left-panel {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-panel h1 {
+    font-size: 38px;
+    margin: 10px 0 5px;
+}
+
+.left-panel p {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.logo-icon {
+    font-size: 100px;
+}
+
+/* Divider */
+.divider {
+    width: 1px;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* Right Panel */
+.right-panel {
+    width: 55%;
+    padding: 70px 80px;
+}
+
+.right-panel h2 {
+    margin-bottom: 30px;
+}
+/* ================= RECOVER LAYOUT ================= */
+#recoverPage {
+    color: white;
+    
+}
+/* ================= REGISTER LAYOUT ================= */
+#registerPage {
+    color: white;
+    
+}
+/* ================= FORM ELEMENTS ================= */
+
+label {
+    font-size: 11px;
+    letter-spacing: 1px;
+    opacity: 0.7;
+    display: block;
+    margin-top: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    margin-top: 6px;
+    margin-bottom: 10px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 8px;
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    transition: 0.2s ease;
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid #2f80ed;
+    background: rgba(255, 255, 255, 0.18);
+}
+
+/* ================= BUTTONS ================= */
+
+.Format-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(to right, #6a5cff, #2f80ed);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* ================= LINKS ================= */
+
+.bottom-links {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    font-size: 12px;
+}
+
+.bottom-links span {
+    cursor: pointer;
+    color: #00e0ff;
+}
+
+.bottom-links .create {
+    color: #00ffcc;
+}
+
+.back-link {
+    margin-top: 20px;
+    text-align: center;
+    cursor: pointer;
+    color: #00e0ff;
+}
+
+/* ================= SIMPLE BOX PAGES ================= */
+
+.simple-box {
+    width: 500px;
+    max-width: 90%;
+    margin: auto;
+    padding: 40px;
+    border-radius: 20px;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    backdrop-filter: blur(10px);
+}
+.simple-box button {
+    margin-top: 25px;
+}
+
+.simple-box .back-link {
+    margin-top: 15px;
+    display: block;
+    text-align: center;
+}
+/* ================= ERROR STYLING ================= */
+
+.error {
+    color: #ff4d4d;
+    font-size: 11px;
+    height: 14px;
+    display: block;
+}
+
+input.error-input {
+    border: 1px solid #ff4d4d;
+}
+
+/* ================= RADIO GROUP ================= */
+
+.radio-group {
+    display: flex;
+    gap: 20px;
+    margin-top: 8px;
+    flex-wrap: wrap;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* ================= RESPONSIVE DESIGN ================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+
+    .auth-container {
+        width: 90%;
+        height: auto;
+    }
+
+    #loginPage {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .left-panel,
+    .right-panel {
+        width: 100%;
+        text-align: center;
+    }
+    .right-panel,
+    .simple-box {
+    padding: 25px;
+    }
+
+    .divider {
+        display: none;
+    }
+
+    .simple-box {
+        width: 90%;
+    }
+}
+
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    body {
+        padding: 20px;
+        overflow: auto;
+    }
+
+    .auth-container {
+        width: 100%;
+        height: auto;
+    }
+
+    #loginPage {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .left-panel {
+        margin-bottom: 30px;
+    }
+
+    .left-panel h1 {
+        font-size: 28px;
+    }
+
+    .right-panel {
+        padding: 20px;
+    }
+
+    input {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .Format-btn {
+        width: 100%;
+        padding: 14px;
+        border-radius: 8px;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;   
+    }
+
+    .bottom-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .simple-box {
+        width: 100%;
+        padding: 20px;
+    }
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>Academic Semesters</title>
+<link rel="stylesheet" href="semester.css">
+</head>
+
+<body>
+
+<h1>Academic Semesters</h1>
+<p>Select a semester to view subjects</p>
+
+<div class="semester-list">
+
+<div class="semester-card">
+<span>Semester 1</span>
+<button class="view-details-btn" data-sem="1">View Details</button>
+</div>
+
+<div class="semester-card">
+<span>Semester 2</span>
+<button class="view-details-btn" data-sem="2">View Details</button>
+</div>
+
+<div class="semester-card">
+<span>Semester 3</span>
+<button class="view-details-btn" data-sem="3">View Details</button>
+</div>
+
+<div class="semester-card">
+<span>Semester 4</span>
+<button class="view-details-btn" data-sem="4">View Details</button>
+</div>
+
+<div class="semester-card">
+<span>Semester 5</span>
+<button class="view-details-btn" data-sem="5">View Details</button>
+</div>
+
+<div class="semester-card">
+<span>Semester 6</span>
+<button class="view-details-btn" data-sem="6">View Details</button>
+</div>
+
+<div class="semester-card">
+<span>Semester 7</span>
+<button class="view-details-btn" data-sem="7">View Details</button>
+</div>
+
+<div class="semester-card">
+<span>Semester 8</span>
+<button class="view-details-btn" data-sem="8">View Details</button>
+</div>
+
+</div>
+
+<!-- SUBJECT MODAL -->
+
+<div id="subjectsModal" class="modal">
+
+<div class="modal-content">
+
+<h3 id="modalTitle">Subjects</h3>
+
+<div id="subjectsList" class="subjects-list"></div>
+
+<!-- ADMIN CONTROLS -->
+
+<div id="adminControls" style="display:none; margin-top:15px;" class="admin-controls">
+
+<input type="text" id="subjectName" class="subject-input" placeholder="Subject Name">
+
+<input type="file" id="notesFile" class="file-input">
+
+<button id="addSubjectBtn" class="add-btn">Add Subject</button>
+
+</div>
+
+<br>
+
+<button onclick="closeModal()" class="close-btn">Close</button>
+
+</div>
+
+</div>
+
+<script src="semester.js"></script>
+
+</body>
+</html>

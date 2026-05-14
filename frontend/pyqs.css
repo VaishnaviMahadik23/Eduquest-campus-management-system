@@ -1,0 +1,92 @@
+body {
+font-family: Arial, sans-serif;
+background: url('images/Home_BG_Image.png') no-repeat center center fixed;
+background-size: cover;
+color: #fff;
+text-align: center;
+margin: 0;
+padding: 20px;
+}
+
+h1 {
+margin-top: 30px;
+}
+
+.semester-filter {
+margin: 20px 0;
+}
+
+/* ADMIN PANEL */
+.admin-upload{
+background: rgba(0,0,0,0.6);
+padding:20px;
+margin:20px auto;
+max-width:500px;
+border-radius:10px;
+}
+
+.admin-upload input,
+.admin-upload select{
+padding:8px;
+margin:5px;
+border-radius:5px;
+border:none;
+}
+
+.admin-upload button{
+padding:8px 14px;
+background:#28a745;
+border:none;
+color:white;
+border-radius:5px;
+cursor:pointer;
+}
+
+.admin-upload button:hover{
+opacity:0.9;
+}
+
+.pyqs-list {
+max-width: 800px;
+margin: 0 auto;
+display: flex;
+flex-direction: column;
+gap: 15px;
+}
+
+.pyq-item {
+display: flex;
+justify-content: space-between;
+align-items:center;
+background: rgba(255,255,255,0.9);
+color: #000;
+padding: 15px 20px;
+border-radius: 8px;
+}
+
+.pyq-item button {
+background-color: #1e90ff;
+border: none;
+color: #fff;
+padding: 6px 12px;
+border-radius: 5px;
+cursor: pointer;
+margin-left:5px;
+}
+
+.delete-btn{
+background:red;
+}
+
+.pyq-item button:hover {
+opacity: 0.8;
+}
+
+.tableheader{
+    background-color: #006ad3 !important;
+    color: #ffffff !important;
+}
+
+.container{
+    color: #ffffff;
+}

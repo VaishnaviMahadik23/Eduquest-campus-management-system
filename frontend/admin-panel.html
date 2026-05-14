@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>Admin Panel</title>
+<link rel="stylesheet" href="admin-panel.css">
+</head>
+
+<body>
+
+<h1>Admin Panel</h1>
+<p>Manage EduQuest System</p>
+
+<div class="admin-grid">
+
+<div class="admin-card" onclick="openUsers()">
+<div class="icon">👥</div>
+<h3>Manage Users</h3>
+<p>View or remove users</p>
+</div>
+
+<div class="admin-card" onclick="openStats()">
+<div class="icon">📊</div>
+<h3>View Upload Stats</h3>
+<p>See system uploads</p>
+</div>
+
+<div class="admin-card" onclick="openSettings()">
+<div class="icon">⚙</div>
+<h3>System Settings</h3>
+<p>Change platform settings</p>
+</div>
+
+</div>
+
+<div id="contentArea"></div>
+
+<script src="admin-panel.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body>
+</html>

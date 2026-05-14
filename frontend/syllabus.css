@@ -1,0 +1,42 @@
+body{
+    font-family: Arial, sans-serif;
+    background: url('images/Home_BG_Image.png') no-repeat center center fixed;
+    background-size: cover;
+    color:#ffffff;
+    margin:0;
+}
+
+.container{
+    max-width:1000px;
+    color: #ffffff;
+}
+
+h1{
+    text-align:center;
+}
+
+.semester-filter{
+    text-align:center;
+}
+
+.table{
+    background: rgba(255, 255, 255, 0.9);
+
+}
+
+.card{
+    background:rgba(255, 255, 255, 0.9);
+}
+
+label{
+    color:#ffffff;
+    font-weight:500;
+}
+
+button{
+    cursor:pointer;
+}
+.tableheader{
+    background-color: #006ad3 !important;
+    color: #ffffff !important;
+}

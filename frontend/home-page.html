@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EduQuest - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="home-page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <h1 class="logo">EduQuest</h1>
+
+
+        <div class="nav-actions">
+            <button onclick="refreshPage()">Refresh</button>
+            <button onclick="openProfile()">Profile</button>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </nav>
+
+    
+        <div class="global-search">
+        <input 
+        type="text"
+        id="searchInput"
+        placeholder="Search books, subjects, pyqs..."
+        onkeyup="globalSearch()"
+        />
+
+        <div id="searchResults"></div>
+
+
+        </div>
+
+    <!-- DASHBOARD CARDS -->
+    <section class="dashboard" id="dashboard">
+
+        <div class="card" id="semesterCard" onclick="openPage('semester.html')">
+            <div class="icon">📅</div>
+            <h3><b>Semester</b></h3>
+            <p>View Details</p>
+        </div>
+
+        <div class="card" id="booksCard" onclick="openPage('books.html')">
+            <div class="icon">📚</div>
+            <h3><b>Books</b></h3>
+            <p>Access Library</p>
+        </div>
+
+        <div class="card" id="syllabusCard" onclick="openPage('syllabus.html')">
+            <div class="icon">📖</div>
+            <h3><b>Syllabus</b></h3>
+            <p>Check Topics</p>
+        </div>
+
+        <div class="card" id="pyqsCard" onclick="openPage('pyqs.html')">
+            <div class="icon">📝</div>
+            <h3><b>PYQs</b></h3>
+            <p>Practice Qs</p>
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <span>© 2025 EduQuest Learning Made Simple.</span>
+        <span id="loggedUser"></span>
+    </footer>
+
+<!-- PROFILE MODAL -->
+<div id="profileModal" class="profile-modal hidden">
+    <div class="profile-card">
+        <div class="profile-avatar"><i class="fas fa-user"></i></div>
+        <h2 id="profileName">PRASAD</h2>
+        <p class="profile-role">USER</p>
+
+        <div class="profile-info">
+            <div class="info-row">
+                <span>📧 Email</span>
+                <span id="profileEmail">prasad@gmail.com</span>
+            </div>
+            <div class="info-row">
+                <span>📅 Joined</span>
+                <span id="profileJoined"></span>
+            </div>
+            <div class="info-row">
+                <span>📘 Learning Status</span>
+                <span>Active Student</span>
+            </div>
+        </div>
+
+        <button class="close-profile" onclick="closeProfile()">Close</button>
+    </div>
+</div>
+
+<!-- MODALS FOR ADMIN CRUD -->
+<!-- Example Add/Edit modal (Bootstrap) -->
+<div class="modal fade" id="adminModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header">
+        <h5 class="modal-title" id="adminModalTitle">Admin Action</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body" id="adminModalBody">
+        <!-- Dynamic form injected by JS -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" id="adminSaveBtn">Save</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="home-page.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+# =========================
+# Node Modules
+# =========================
+node_modules/
+
+# =========================
+# Environment Variables
+# =========================
+.env
+
+# =========================
+# Logs
+# =========================
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# =========================
+# OS Files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# VS Code
+# =========================
+.vscode/
+
+# =========================
+# Uploaded Files
+# =========================
+backend/uploads/books/*
+backend/uploads/notes/*
+backend/uploads/pyqs/*
+backend/uploads/syllabus/*
+
+# Keep upload folders
+!backend/uploads/books/.gitkeep
+!backend/uploads/notes/.gitkeep
+!backend/uploads/pyqs/.gitkeep
+!backend/uploads/syllabus/.gitkeep
+
+# =========================
+# Build / Cache
+# =========================
+dist/
+build/
+.cache/
+
+# =========================
+# Temporary Files
+# =========================
+*.tmp
+*.temp

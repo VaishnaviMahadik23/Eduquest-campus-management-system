@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Library & Resources</title>
+
+<link rel="stylesheet" href="books.css">
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1 class="text-center mt-4">Library & Resources</h1>
+
+<!-- ============================= -->
+<!-- ADMIN UPLOAD FORM -->
+<!-- ============================= -->
+
+<div id="adminUploadSection" class="card mt-4 p-4 shadow">
+
+<h4>Upload Book</h4>
+
+<form id="uploadForm">
+
+<div class="row">
+
+<div class="col-md-4">
+<label>Title</label>
+<input type="text" id="title" class="form-control" required>
+</div>
+
+<div class="col-md-4">
+<label>Author</label>
+<input type="text" id="author" class="form-control" required>
+</div>
+
+<div class="col-md-4">
+<label>Semester</label>
+<select id="semester_id" class="form-control">
+<option value="1">Semester 1</option>
+<option value="2">Semester 2</option>
+<option value="3">Semester 3</option>
+<option value="4">Semester 4</option>
+<option value="5">Semester 5</option>
+<option value="6">Semester 6</option>
+<option value="7">Semester 7</option>
+<option value="8">Semester 8</option>
+</select>
+</div>
+
+</div>
+
+<div class="row mt-3">
+
+<div class="col-md-6">
+<label>Upload PDF</label>
+<input type="file" id="pdfFile" class="form-control" accept="application/pdf" required>
+</div>
+
+<div class="col-md-6 d-flex align-items-end">
+<button type="submit" class="btn btn-primary w-100">
+Upload Book
+</button>
+</div>
+
+</div>
+
+</form>
+
+</div>
+
+<!-- ============================= -->
+<!-- SEMESTER FILTER -->
+<!-- ============================= -->
+
+<div class="semester-filter mt-4 text-center">
+
+<label>Select Semester:</label>
+
+<select id="semesterSelect" class="form-select w-25 mx-auto" onchange="filterBooks()">
+<option value="1">Semester 1</option>
+<option value="2">Semester 2</option>
+<option value="3">Semester 3</option>
+<option value="4">Semester 4</option>
+<option value="5">Semester 5</option>
+<option value="6">Semester 6</option>
+<option value="7">Semester 7</option>
+<option value="8">Semester 8</option>
+</select>
+
+</div>
+
+<!-- ============================= -->
+<!-- BOOKS TABLE -->
+<!-- ============================= -->
+
+<div class="table-responsive mt-4">
+
+<table class="table table-bordered table-light">
+
+<thead>
+
+<tr>
+<th class="tableheader">Title</th>
+<th class="tableheader">Author</th>
+<th class="tableheader">Semester</th>
+<th class="tableheader">Actions</th>
+</tr>
+
+</thead>
+
+<tbody id="booksList">
+
+<!-- Dynamic books -->
+
+</tbody>
+
+</table>
+
+</div>
+
+<p id="booksStatus" class="text-center"></p>
+
+</div>
+
+<script src="books.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url('images/Home_BG_Image.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    margin: 0;
+    padding: 20px;
+}
+
+h1{
+    font-weight: bold;
+}
+
+.semester-filter{
+    text-align:center;
+}
+
+.card{
+    background: rgba(255,255,255,0.95);
+    color:black;
+}
+
+table{
+    background:white;
+}
+
+#booksStatus{
+    margin-top:20px;
+}
+
+.tableheader{
+    background-color: #006ad3 !important;
+    color: #ffffff !important;
+}
+
+.container{
+    color: #ffffff;
+}
