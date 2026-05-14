@@ -113,7 +113,7 @@ body > * {
 .profile-modal {
     position: fixed;
     inset: 0;
-    background: linear-gradient(#00e0ff, #5996b0, #203a43, #2c5364);
+    background-image: url('images/Home_BG_Image.png');
     display: flex;
     justify-content: center;
     align-items: center;
@@ -135,6 +135,7 @@ body > * {
     width: 90%;
     max-width: 420px;
     background: rgba(255, 255, 255, 0.05);
+    background-color: #00e0ff;
     backdrop-filter: blur(20px);
     border-radius: 15px;
     padding: 30px 25px;
