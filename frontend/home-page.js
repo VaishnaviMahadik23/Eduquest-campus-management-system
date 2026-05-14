@@ -85,7 +85,7 @@ document.getElementById("searchResults").style.display="none";
 return;
 }
 
-const res = await fetch(`http://localhost:5000/api/search?q=${query}`);
+const res = await fetch(`https://eduquest-campus-management-system.onrender.com/api/search?q=${query}`);
 const results = await res.json();
 
 let html = "";

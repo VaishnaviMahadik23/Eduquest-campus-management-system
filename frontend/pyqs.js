@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000/api/pyqs";
+const API_URL = "https://eduquest-campus-management-system.onrender.com/api/pyqs";
 
 const pyqsList = document.getElementById("pyqsList");
 const pyqSemesterSelect = document.getElementById("pyqSemesterSelect");
@@ -64,7 +64,7 @@ function displayPYQs(pyqs){
 
         <td>
 
-        <a href="http://localhost:5000${pyq.file_url}"
+        <a href="https://eduquest-campus-management-system.onrender.com${pyq.file_url}"
         target="_blank"
         class="btn btn-success btn-sm">
         Download

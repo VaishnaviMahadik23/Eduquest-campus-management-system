@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000/api/syllabus";
+const API_URL = "https://eduquest-campus-management-system.onrender.com/api/syllabus";
 
 const syllabusList = document.getElementById("syllabusList");
 const semesterSelect = document.getElementById("semesterSelect");
@@ -74,7 +74,7 @@ function displaySyllabus(data){
 
         <td>
 
-        <a href="http://localhost:5000${item.file_url}"
+        <a href="https://eduquest-campus-management-system.onrender.com${item.file_url}"
         target="_blank"
         class="btn btn-success btn-sm">
         Download

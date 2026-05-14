@@ -15,7 +15,7 @@ document.getElementById("loginForm").addEventListener("submit", async function(e
 
     try{
 
-        const response = await fetch("http://localhost:5000/api/auth/login",{
+        const response = await fetch("https://eduquest-campus-management-system.onrender.com/api/auth/login",{
             method:"POST",
             headers:{
                 "Content-Type":"application/json"
@@ -97,7 +97,7 @@ document.getElementById("registerForm").addEventListener("submit", async functio
 
     try{
 
-        const response = await fetch("http://localhost:5000/api/auth/register",{
+        const response = await fetch("https://eduquest-campus-management-system.onrender.com/api/auth/register",{
             method:"POST",
             headers:{
                 "Content-Type":"application/json"

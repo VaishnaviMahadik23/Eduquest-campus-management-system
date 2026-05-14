@@ -16,7 +16,7 @@ async function openUsers(){
 
 content.innerHTML = "<h2>Users</h2>Loading...";
 
-const res = await fetch("http://localhost:5000/api/auth/users");
+const res = await fetch("https://eduquest-campus-management-system.onrender.com/api/auth/users");
 const users = await res.json();
 
 let html = "<h2>Users</h2>";
@@ -41,7 +41,7 @@ async function deleteUser(id){
 
 if(!confirm("Delete this user?")) return;
 
-await fetch(`http://localhost:5000/api/auth/users/${id}`,{
+await fetch(`https://eduquest-campus-management-system.onrender.com/api/auth/users/${id}`,{
 method:"DELETE"
 });
 
@@ -56,7 +56,7 @@ async function openStats(){
 
 content.innerHTML = "Loading stats...";
 
-const res = await fetch("http://localhost:5000/api/admin/stats");
+const res = await fetch("https://eduquest-campus-management-system.onrender.com/api/admin/stats");
 const stats = await res.json();
 
 content.innerHTML = `

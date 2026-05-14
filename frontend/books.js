@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000/api/books";
+const API_URL = "https://eduquest-campus-management-system.onrender.com/api/books";
 
 const booksList = document.getElementById("booksList");
 const semesterSelect = document.getElementById("semesterSelect");
@@ -78,7 +78,7 @@ function displayBooks(books) {
 
         <td>
 
-            <a href="http://localhost:5000${book.pdf_url}" 
+            <a href="https://eduquest-campus-management-system.onrender.com${book.pdf_url}" 
             target="_blank"
             class="btn btn-success btn-sm me-2">
             Download
@@ -125,7 +125,7 @@ uploadForm.addEventListener("submit", async function(e){
 
     try {
 
-       const res = await fetch("http://localhost:5000/api/books/upload",{
+       const res = await fetch("https://eduquest-campus-management-system.onrender.com/api/books/upload",{
 
         method:"POST",
 
@@ -163,7 +163,7 @@ if(!confirm("Delete this book?")) return;
 
 try{
 
-const res = await fetch(`http://localhost:5000/api/books/delete/${id}`,{
+const res = await fetch(`https://eduquest-campus-management-system.onrender.com/api/books/delete/${id}`,{
 
 method:"DELETE",
 
@@ -202,7 +202,7 @@ async function editBook(id, title, author, semester){
 
     try{
 
-        const res = await fetch(`http://localhost:5000/api/books/update/${id}`,{
+        const res = await fetch(`https://eduquest-campus-management-system.onrender.com/api/books/update/${id}`,{
 
         method:"PUT",
 

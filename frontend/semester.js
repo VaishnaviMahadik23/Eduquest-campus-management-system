@@ -34,7 +34,7 @@ loadSubjects(sem);
 // LOAD SUBJECTS
 async function loadSubjects(sem){
 
-const res = await fetch(`http://localhost:5000/api/semester/${sem}`);
+const res = await fetch(`https://eduquest-campus-management-system.onrender.com/api/semester/${sem}`);
 
 const data = await res.json();
 
@@ -50,7 +50,7 @@ subjectsList.innerHTML += `
 
 <div class="subject-actions">
 
-${sub.notes_url ? `<a class="notes-btn" href="http://localhost:5000${sub.notes_url}" target="_blank">Download</a>` : ""}
+${sub.notes_url ? `<a class="notes-btn" href="https://eduquest-campus-management-system.onrender.com${sub.notes_url}" target="_blank">Download</a>` : ""}
 
 ${role === "admin" ? `<button class="edit-btn" onclick="editSubject(${sub.id},'${sub.subject_name}')">Edit</button> <button class="delete-btn" onclick="deleteSubject(${sub.id})">Delete</button>` : ""}
 
@@ -82,7 +82,7 @@ formData.append("semester_id", currentSemester);
 formData.append("subject_name", name);
 formData.append("notes", file);
 
-await fetch("http://localhost:5000/api/semester/add", {
+await fetch("https://eduquest-campus-management-system.onrender.com/api/semester/add", {
 
 method: "POST",
 body: formData
@@ -101,7 +101,7 @@ async function deleteSubject(id){
 
 if(!confirm("Delete this subject?")) return;
 
-await fetch(`http://localhost:5000/api/semester/${id}`, {
+await fetch(`https://eduquest-campus-management-system.onrender.com/api/semester/${id}`, {
 
 method: "DELETE"
 
@@ -118,7 +118,7 @@ const newName = prompt("Update Subject Name", oldName);
 
 if(!newName) return;
 
-await fetch(`http://localhost:5000/api/semester/${id}`, {
+await fetch(`https://eduquest-campus-management-system.onrender.com/api/semester/${id}`, {
 
 method: "PUT",
 
