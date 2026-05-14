@@ -113,7 +113,7 @@ body > * {
 .profile-modal {
     position: fixed;
     inset: 0;
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    background: linear-gradient(#00e0ff, #5996b0, #203a43, #2c5364);
     display: flex;
     justify-content: center;
     align-items: center;
